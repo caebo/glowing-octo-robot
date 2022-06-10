@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" 
+              content="width=device-width, initial-scale=1.0" />
+        <title>WetterApp</title>
+    </head>
+    <body>
+        <!-- Here a loader is created which 
+             loads till response comes -->
+        <h1 id="loading">Please input your location and your API-key:</h1>
+        <form id="getApiData">
+            <input type="number" id="lat" name="lat" min="-90" max="90">
+            <input type="number" id="lon" name="lon" min="-180" max="180">
+            <input type="text" id="key" name="key">
+            <input type="button" value="Wetter checken" id="startButton">
+        </form>
+        <!-- table for showing data -->
+        <table id="employees"></table>
+        <script src="neu.js"></script>
+    </body>
+</html>
