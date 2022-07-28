@@ -1,0 +1,16 @@
+<title>Ollis WebApp</title>
+
+<script src="olli.js"></script>
+
+<body style="background-color:#A0E">
+    Überschrift
+    <hr/>
+    <span id="loc">Ort</span>: <span id="temp"><small>loading...</small></span><span id="hum"><small>loading...</small></span>
+</body>
+<script>
+    getApi().then(x=>
+        setze("temp", x.main["temp"]+"°C") &&
+        setze("hum",  x.main["humidity"]+"%")
+    );
+    setze("loc", JSON.parse(localStorage["locations"])[0]["name"]);
+</script>
