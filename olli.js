@@ -23,7 +23,7 @@ function fromStorage(name, question) {
 
 async function getApi() {
   let key = fromStorage("APIkey", "Geben Sie ihren API-Key an:");
-  let loc = fromStorage("locations", null);
+  let loc = fromStorage("locations", "[{\"lat\": 54.32, \"lon\": 10.14, \"name\": \"Kiel\"}]");
   loc = JSON.parse(loc);
   lat = loc[0]["lat"];
   lon = loc[0]["lon"];
